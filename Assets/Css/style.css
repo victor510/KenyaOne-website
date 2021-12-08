@@ -10,6 +10,15 @@
     font-family: Montserrat ;
     src: url(../Fonts/Montserrat/Montserrat-Light.ttf);
 }
+@font-face {
+    font-family: Poppins-Regular ;
+    src: url(../Fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins-SemiBold ;
+    src: url(../Fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
 *
 {
     margin: 0;
@@ -90,7 +99,7 @@ body
 {
     font-size: 1.5rem;
 }
-.birth-date
+/* .birth-date
 {
     color: rgb(107, 97, 97);
     font-size: 1.5em;
@@ -107,41 +116,63 @@ body
     left: -.3rem;
     width: 120%;
     background-color: rgb(107, 97, 97);
+} */
+
+.carousel
+{
+    position: absolute;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+.carousel .dash
+{
+    width: 90px;
+    height: 3px;
+    background-color: #333;
+    margin: 0 5px;
 }
 .sub-section-one-main-content
 {
     position: absolute;
-    top: 40%;
+    top: 30%;
     height: 100%;
     width: 100%;
-    padding-left: 3rem;
-    padding-right: 3.5rem;
+    padding-left: 4rem;
+    padding-right: 4.5rem;
+    text-align: center;
 }
 .header-Kenya
 {
+    font-family: 'Poppins-SemiBold';
+    font-weight: 900;
     color: rgb(1, 49, 22);
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 5rem;
+    margin-bottom: .5rem;
 }
 .intro-text
 {
-    color: rgb(1, 49, 22);
+    color: rgb(0, 10, 5);
     font-weight: lighter;
-    font-family: 'Montserrat' ;
+    font-family: 'Poppins-Regular';
+    text-align: left;
 }
 .icons-scroll
 {
-    margin-top: 3rem;
+    margin-top: 1rem;
+    text-align: left;
 }
 .icons-scroll svg
 {
-    height: 1.5rem;
+    height: 1.2rem;
     width: auto;
     color: #555;
 }
 .icons-scroll svg:first-child
 {
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 .icons-scroll svg:hover
 {
