@@ -3,11 +3,15 @@
     src: url(../Fonts/Niveau_Grotesk/HVD\ Fonts\ -\ NiveauGroteskBold.otf);
 }
 @font-face {
-    font-family: Montserrat ;
+    font-family: Redwing ;
+    src: url(../Fonts/Redwing-Medium.ttf);
+}
+@font-face {
+    font-family: Montserrat-medium ;
     src: url(../Fonts/Montserrat/Montserrat-Medium.ttf);
 }
 @font-face {
-    font-family: Montserrat ;
+    font-family: Montserrat-light ;
     src: url(../Fonts/Montserrat/Montserrat-Light.ttf);
 }
 @font-face {
@@ -44,7 +48,7 @@ body
 .sub-section-one
 {
     height: 100%;
-    width: 55%;
+    width: 60%;
     position: relative;
 }
 .nav
@@ -72,14 +76,15 @@ body
 .menu-button::before,
 .menu-button::after
 {
+    height: .1rem;
+    width: 80%;
     background-color: rgb(107, 97, 97);
 }
 .center
 {
     position: absolute;
-    height: .2rem;
-    width: 100%;
     border-radius: .5rem;
+    background-color: tomato;
     transform: translateY(.6rem);
 }
 .menu-button::before,
@@ -87,8 +92,6 @@ body
 {
     content: '';
     position: absolute;
-    height: .2rem;
-    width: 100%;
     border-radius: .5rem;
 }
 .menu-button::after
@@ -99,25 +102,6 @@ body
 {
     font-size: 1.5rem;
 }
-/* .birth-date
-{
-    color: rgb(107, 97, 97);
-    font-size: 1.5em;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-35%, -50%);
-}
-.birth-date::before
-{
-    content: '';
-    position: absolute;
-    height: .1rem;
-    left: -.3rem;
-    width: 120%;
-    background-color: rgb(107, 97, 97);
-} */
-
 .carousel
 {
     position: absolute;
@@ -126,12 +110,15 @@ body
     transform: translateX(-50%);
     display: flex;
     align-items: center;
+    font-family: 'Redwing';
+    font-size: 1.2rem;
+    font-weight: lighter;
 }
 .carousel .dash
 {
     width: 90px;
     height: 3px;
-    background-color: #333;
+    background-color: tomato;
     margin: 0 5px;
 }
 .sub-section-one-main-content
@@ -140,22 +127,26 @@ body
     top: 30%;
     height: 100%;
     width: 100%;
-    padding-left: 4rem;
-    padding-right: 4.5rem;
     text-align: center;
+    padding: 0 3rem;
 }
 .header-Kenya
 {
     font-family: 'Poppins-SemiBold';
     font-weight: 900;
     color: rgb(1, 49, 22);
-    font-size: 5rem;
-    margin-bottom: .5rem;
+    font-size: 4rem;
+    letter-spacing: -.5rem;
 }
 .intro-text
 {
-    color: rgb(0, 10, 5);
-    font-size: .8rem;
+    margin-left: 6rem;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    width: 70%;
+    margin-top: -.5rem;
+    color: rgb(1, 49, 22);
+    font-size: .7rem;
     font-weight: lighter;
     font-family: 'Poppins-Regular';
     text-align: left;
@@ -163,8 +154,8 @@ body
 .icons-scroll
 {
     margin-top: 1rem;
-    text-align: left;
     display: flex;
+    margin-left: 6rem;
 }
 .icons-scroll div
 {
@@ -191,7 +182,7 @@ body
 .icons-scroll div:hover
 {
     cursor: pointer;
-    background-color: rgb(1, 49, 22);
+    background-color: tomato;
     border: none;
 }
 .icons-scroll div:hover svg
