@@ -3,11 +3,15 @@
     src: url(../Fonts/Niveau_Grotesk/HVD\ Fonts\ -\ NiveauGroteskBold.otf);
 }
 @font-face {
-    font-family: Montserrat ;
+    font-family: Redwing ;
+    src: url(../Fonts/Redwing-Medium.ttf);
+}
+@font-face {
+    font-family: Montserrat-medium ;
     src: url(../Fonts/Montserrat/Montserrat-Medium.ttf);
 }
 @font-face {
-    font-family: Montserrat ;
+    font-family: Montserrat-light ;
     src: url(../Fonts/Montserrat/Montserrat-Light.ttf);
 }
 @font-face {
@@ -17,6 +21,10 @@
 @font-face {
     font-family: Poppins-SemiBold ;
     src: url(../Fonts/Poppins/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: Poppins-ExtraLight ;
+    src: url(../Fonts/Poppins/Poppins-ExtraLight.ttf);
 }
 
 *
@@ -29,7 +37,7 @@ body
 {
     min-height: 100vh;
     min-width: 100%;
-    background-color: azure;
+    background-color: rgb(215, 221, 221);
     font-family: 'Niveau Grotesk';
     font-weight: bold;
 }
@@ -44,7 +52,7 @@ body
 .sub-section-one
 {
     height: 100%;
-    width: 55%;
+    width: 60%;
     position: relative;
 }
 .nav
@@ -72,52 +80,33 @@ body
 .menu-button::before,
 .menu-button::after
 {
+    height: .1rem;
+    width: 75%;
     background-color: rgb(107, 97, 97);
 }
 .center
 {
     position: absolute;
-    height: .2rem;
-    width: 100%;
     border-radius: .5rem;
-    transform: translateY(.6rem);
+    background-color: tomato;
+    transform: translateY(.5rem);
 }
 .menu-button::before,
 .menu-button::after
 {
     content: '';
     position: absolute;
-    height: .2rem;
-    width: 100%;
     border-radius: .5rem;
 }
 .menu-button::after
 {
-    transform: translateY(1.2rem);
+    transform: translateY(1rem);
 }
 .africa-text
 {
     font-size: 1.5rem;
+    cursor: pointer;
 }
-/* .birth-date
-{
-    color: rgb(107, 97, 97);
-    font-size: 1.5em;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-35%, -50%);
-}
-.birth-date::before
-{
-    content: '';
-    position: absolute;
-    height: .1rem;
-    left: -.3rem;
-    width: 120%;
-    background-color: rgb(107, 97, 97);
-} */
-
 .carousel
 {
     position: absolute;
@@ -126,12 +115,15 @@ body
     transform: translateX(-50%);
     display: flex;
     align-items: center;
+    font-family: 'Redwing';
+    font-size: 1.2rem;
+    font-weight: lighter;
 }
 .carousel .dash
 {
     width: 90px;
     height: 3px;
-    background-color: #333;
+    background-color: tomato;
     margin: 0 5px;
 }
 .sub-section-one-main-content
@@ -140,21 +132,26 @@ body
     top: 30%;
     height: 100%;
     width: 100%;
-    padding-left: 4rem;
-    padding-right: 4.5rem;
     text-align: center;
+    padding: 0 3rem;
 }
 .header-Kenya
 {
     font-family: 'Poppins-SemiBold';
     font-weight: 900;
-    color: rgb(1, 49, 22);
-    font-size: 5rem;
-    margin-bottom: .5rem;
+    color: #000;
+    font-size: 4rem;
+    letter-spacing: .2rem;
 }
 .intro-text
 {
-    color: rgb(0, 10, 5);
+    margin-left: 6rem;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    width: 70%;
+    margin-top: -.5rem;
+    color: #222;
+    font-size: .7rem;
     font-weight: lighter;
     font-family: 'Poppins-Regular';
     text-align: left;
@@ -162,47 +159,134 @@ body
 .icons-scroll
 {
     margin-top: 1rem;
-    text-align: left;
+    display: flex;
+    margin-left: 6rem;
+}
+.icons-scroll div
+{
+    height: 1.8rem;
+    width: 1.8rem;
+    border: 1px solid #888;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .4s;
+
 }
 .icons-scroll svg
 {
-    height: 1.2rem;
+    height: 0.8rem;
     width: auto;
-    color: #555;
+    color: #000;
 }
-.icons-scroll svg:first-child
+.icons-scroll div:first-child
 {
-    margin-right: 1rem;
+    margin-right: .8rem;
 }
-.icons-scroll svg:hover
+.icons-scroll div:hover
 {
     cursor: pointer;
+    background-color: tomato;
+    border: none;
+}
+.icons-scroll div:hover svg
+{
+    color: #fff;
 }
 
 .sub-section-two
 {
     height: 100%;
-    width: calc(100% - 55%);
+    width: calc(100% - 60%);
     position: relative;
 }
 
-.sub-section-two .img-container
+.sub-section-two .img-slide
 {
-    background-color: teal;
     height: 65%;
     width: 100%;
     position: absolute;
 }
 .sub-section-two .img-container img
 {
-    height: 100%;
+    position: absolute;
+    height: 22rem;
     width: 100%;
     object-fit: cover;
 }
 
-.know-more-text
+.Explore
 {
-    height: 100%;
+    background-color: rgb(238, 202, 105);
+    position: absolute;
+    bottom: 0;
+    height: calc(100% - 22rem);
     width: 100%;
-    background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Explore h4
+{
+    font-family: 'Poppins-Regular';
+    margin-top: -1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(1, 1, 41);
+}
+.Explore h4,
+.Explore svg,
+.Explore p
+{
+    margin-left: 4rem;
+}
+.Explore p
+{
+    position: absolute;
+    margin-top: .5rem;
+    letter-spacing: .25rem;
+    font-family: 'Poppins-ExtraLight';
+    font-size: .8rem;
+    color: #222;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease;
+}
+.Explore svg
+{
+    color: #222;
+    transition: all .4s ease;
+}
+.Explore:hover svg
+{
+    cursor: pointer;
+    transform: rotate(-90deg);
+    opacity: 0;
+}
+.Explore p::before
+{
+    content: '';
+    position: absolute;
+    background-color: #555;
+    height: 1px;
+    width: 0;
+    top: 50%;
+    left: -15%;
+    transform-origin: left;
+    transition: .3s ease;
+    transition-delay: .3s;
+}
+.Explore:hover p
+{
+    transform: translateY(-2.1rem);
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+.Explore:hover p::before
+{
+    width: 120%;
 }
