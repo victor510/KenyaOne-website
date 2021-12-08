@@ -22,6 +22,10 @@
     font-family: Poppins-SemiBold ;
     src: url(../Fonts/Poppins/Poppins-SemiBold.ttf);
 }
+@font-face {
+    font-family: Poppins-ExtraLight ;
+    src: url(../Fonts/Poppins/Poppins-ExtraLight.ttf);
+}
 
 *
 {
@@ -33,7 +37,7 @@ body
 {
     min-height: 100vh;
     min-width: 100%;
-    background-color: azure;
+    background-color: rgb(215, 221, 221);
     font-family: 'Niveau Grotesk';
     font-weight: bold;
 }
@@ -77,7 +81,7 @@ body
 .menu-button::after
 {
     height: .1rem;
-    width: 80%;
+    width: 75%;
     background-color: rgb(107, 97, 97);
 }
 .center
@@ -85,7 +89,7 @@ body
     position: absolute;
     border-radius: .5rem;
     background-color: tomato;
-    transform: translateY(.6rem);
+    transform: translateY(.5rem);
 }
 .menu-button::before,
 .menu-button::after
@@ -96,11 +100,12 @@ body
 }
 .menu-button::after
 {
-    transform: translateY(1.2rem);
+    transform: translateY(1rem);
 }
 .africa-text
 {
     font-size: 1.5rem;
+    cursor: pointer;
 }
 .carousel
 {
@@ -134,9 +139,9 @@ body
 {
     font-family: 'Poppins-SemiBold';
     font-weight: 900;
-    color: rgb(1, 49, 22);
+    color: #000;
     font-size: 4rem;
-    letter-spacing: -.5rem;
+    letter-spacing: .2rem;
 }
 .intro-text
 {
@@ -145,7 +150,7 @@ body
     line-height: 1.5rem;
     width: 70%;
     margin-top: -.5rem;
-    color: rgb(1, 49, 22);
+    color: #222;
     font-size: .7rem;
     font-weight: lighter;
     font-family: 'Poppins-Regular';
@@ -193,27 +198,95 @@ body
 .sub-section-two
 {
     height: 100%;
-    width: calc(100% - 55%);
+    width: calc(100% - 60%);
     position: relative;
 }
 
-.sub-section-two .img-container
+.sub-section-two .img-slide
 {
-    background-color: teal;
     height: 65%;
     width: 100%;
     position: absolute;
 }
 .sub-section-two .img-container img
 {
-    height: 100%;
+    position: absolute;
+    height: 22rem;
     width: 100%;
     object-fit: cover;
 }
 
-.know-more-text
+.Explore
 {
-    height: 100%;
+    background-color: rgb(238, 202, 105);
+    position: absolute;
+    bottom: 0;
+    height: calc(100% - 22rem);
     width: 100%;
-    background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Explore h4
+{
+    font-family: 'Poppins-Regular';
+    margin-top: -1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(1, 1, 41);
+}
+.Explore h4,
+.Explore svg,
+.Explore p
+{
+    margin-left: 4rem;
+}
+.Explore p
+{
+    position: absolute;
+    margin-top: .5rem;
+    letter-spacing: .25rem;
+    font-family: 'Poppins-ExtraLight';
+    font-size: .8rem;
+    color: #222;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease;
+}
+.Explore svg
+{
+    color: #222;
+    transition: all .4s ease;
+}
+.Explore:hover svg
+{
+    cursor: pointer;
+    transform: rotate(-90deg);
+    opacity: 0;
+}
+.Explore p::before
+{
+    content: '';
+    position: absolute;
+    background-color: #555;
+    height: 1px;
+    width: 0;
+    top: 50%;
+    left: -15%;
+    transform-origin: left;
+    transition: .3s ease;
+    transition-delay: .3s;
+}
+.Explore:hover p
+{
+    transform: translateY(-2.1rem);
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+.Explore:hover p::before
+{
+    width: 120%;
 }
