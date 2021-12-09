@@ -25,7 +25,7 @@
     font-family: Poppins ;
     src: url(../Fonts/Poppins/Poppins-Regular.ttf), 
     url(../Fonts/Poppins/Poppins-SemiBold.ttf);
-    src: url(../Fonts/Poppins/Poppins-Bold.ttf), url(../Fonts/Poppins/Poppins-ExtraLight.ttf);
+    src: url(../Fonts/Poppins/Poppins-Bold.ttf);
 }
 @font-face {
     font-family: Poppins-ExtraLight;
@@ -123,7 +123,7 @@ body
 .carousel
 {
     position: absolute;
-    top: 6rem;
+    top: 10rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -142,14 +142,16 @@ body
 .sub-section-one-main-content
 {
     position: absolute;
-    top: 30%;
+    left: -3rem;
+    top: 35%;
     height: 100%;
     width: 100%;
+    text-align: center;
     padding: 0 4rem;
 }
 .header-country
 {
-    font-family: 'Poppins';
+    font-family: 'Poppins-Bold';
     font-weight: 900;
     color: #222;
     font-size: 5rem;
@@ -161,12 +163,12 @@ body
 {
     margin-left: 5rem;
     margin-bottom: 1rem;
-    margin-top: -.5rem;
-    line-height: 1.4rem;
+    line-height: 1.2rem;
+    width: 90%;
     color: #333;
     font-size: .7rem;
     font-weight:400;
-    font-family: 'Aileron';
+    font-family: 'Aileron-Light';
     text-align: left;
     letter-spacing: .2ch;
 }
@@ -236,6 +238,7 @@ body
     background-color: tomato;
     position: absolute;
     bottom: 0;
+    height: calc(100% - 30rem);
     width: 100%;
     display: flex;
     justify-content: center;
