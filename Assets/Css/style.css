@@ -211,7 +211,6 @@ body
 .sub-section-two .img-container img
 {
     position: absolute;
-    height: 22rem;
     width: 100%;
     object-fit: cover;
 }
@@ -221,7 +220,7 @@ body
     background-color: rgb(238, 202, 105);
     position: absolute;
     bottom: 0;
-    height: calc(100% - 22rem);
+    height: 12.5rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -231,7 +230,7 @@ body
 .Explore h4
 {
     font-family: 'Poppins-Regular';
-    margin-top: -1rem;
+    margin-top: 3rem;
     font-weight: bold;
     font-size: 1.1rem;
     color: rgb(1, 1, 41);
@@ -240,7 +239,7 @@ body
 .Explore svg,
 .Explore p
 {
-    margin-left: 4rem;
+    margin-left: 8rem;
 }
 .Explore p
 {
