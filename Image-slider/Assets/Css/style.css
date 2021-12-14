@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Monoton&family=Orbitron:wght@400;500&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+  font-family: Aileron-Light;
+  src: url(../Fonts/Aileron/Aileron-Light.otf);
+}
+@font-face {
+  font-family: Redwing;
+  src: url(../Fonts/Redwing-Medium.ttf);
+}
+
+
+:root
+{
+  --body-font: 'Poppins', sans-serif ;
+  --alternative-contrast-font: Aileron-Light ;
+
+  --text-color: rgb(0, 44, 17);
+  --gray-color: #444;
+  --nav-color: #222;
+  --header-color: rgb(0, 160, 107);
+  --sub-header-color: rgb(0, 66, 45);
+
+
+  --regular-font-size: 1rem;
+  --large-font-size: 2.5rem;
+  --extra-large-font-size: 4rem;
+  --medium-font-size: 2rem;
+  --small-font-size: .8rem;
+
+  --section-padding: .5rem;
+  --medium-padding: 1.5rem;
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  height: 100vh;
+  width: 100%;
+}
+/* BASIC STYING */
+.home
+{
+  font-family: var(--body-font);
+  height: 100vh;
+}
+a
+{
+  text-decoration: none;
+}
+.header
+{
+  color: var(--header-color);
+  font-family: var(--body-font);
+  font-weight: bold;
+}
+.sub-header
+{
+  color: var(--sub-header-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+nav
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--medium-padding);
+}
+.menu-icon
+{
+  cursor: pointer;
+}
+.menu-icon, 
+.menu-icon::before,
+.menu-icon::after
+{
+  width: 1.5rem;
+  background-color: var(--nav-color);
+  height: .2rem;
+}
+.menu-icon::before
+{
+  content: '';
+  position: absolute;
+  transform: translateY(-.3rem);
+}
+.menu-icon::after
+{
+  content: '';
+  position: absolute;
+  transform: translateY(.3rem);
+}
+
+/* LAYOUT */
+.home
+{
+  height: 100vh;
+  display: flex;
+}
+.subsection
+{
+  padding: var(--section-padding);
+  height: 100%;
+}
+.sub-section-one
+{
+  width: 50%;
+  position: relative;
+}
+.logo
+{
+  color: rgb(27, 26, 26);
+  font-family: var(--body-font);
+  font-weight: bold;
+  font-size: var(--medium-font-size);
+}
+
+.sub-section-one-main-content
+{
+  max-width: 70% ;
+  margin: auto;
+  margin-top: 2.5rem;
+  margin-left: 8.5rem;
+  color: var(--text-color);
+}
+
+.country-name
+{
+  font-size: var(--extra-large-font-size);
+  display: flex;
+  align-items: center;
+}
+.independence-day
+{
+  font-size: 1rem;
+  margin: auto;
+  border-bottom: 1px solid var(--text-color);
+  position: relative;
+}
+.independence-day::before
+{
+  position: absolute;
+  content: 'independence day';
+  top: -1.5rem;
+  left: 1rem;
+  font-weight: lighter;
+  font-size: .8rem;
+  background-color: var(--sub-header-color);
+  color: #fff;
+  padding: .25rem;
+  opacity: 0;
+  transition: transform .5s, opacity .3s;
+}
+.independence-day:hover
+{
+  cursor: pointer;
+}
+.independence-day:hover:before
+{
+  opacity: 1;
+  transform: translateY(-.5rem);
+}
+.icons-scroll
+{
+  display: flex;
+  margin-top: 1.5rem;
+}
+.prev, .next
+{
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  border: .01rem solid var(--nav-color);
+  cursor: pointer;
+  transition: backgorund-color .2s, color .4s;
+}
+.prev:hover,
+.next:hover
+{
+  background-color: lightcoral;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+.prev
+{
+  margin-right: 2rem;
+}
+
+.description-text
+{
+  color: var(--text-color);
+  font-family:var(--body-font);
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.quick-info
+{
+  color: var(--text-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: auto;
+  padding: .1rem;
+  font-size: var(--small-font-size);
+}
+
+.sub-section-two
+{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.slider-container
+{
+  max-height: 80%;
+  max-width: 100%;
+  background-color:burlywood;
+  overflow: hidden;
+}
+.slider-container img
+{
+  max-width: 100%;
+  min-height: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.caption
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  color: #fff;
+}
+.sub-section-two-bottom-info
+{
+  display: inherit;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+.quick-facts
+{
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  bottom: .5rem;
+  left: -2rem;
+  padding: 1.2rem;
+  border-top-right-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+}
+.fact
+{
+  padding: 1rem 0 1rem 0;
+}
+.fact h3
+
+{
+  color: crimson;
+}
+.fact h3 p
+{
+  font-size: .2rem;
+}
+
+.to-cities
+{
+  position: absolute;
+  bottom: 5%;
+  right:10%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+.to-cities h5
+{
+  font-family: var(--alternative-contrast-font);
+  color: var(--nav-color);
+}
+
+@media screen and (min-height: 700px)
+{
+  .home
+  {
+    padding: 1rem;
+  }
+
+}
