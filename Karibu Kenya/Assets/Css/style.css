@@ -17,7 +17,9 @@
   --text-color: rgb(0, 44, 17);
   --gray-color: #444;
   --nav-color: #222;
+  --alert-color: crimson;
   --header-color: rgb(0, 160, 107);
+  --overlay-color: rgba(1, 15, 53, 0.692);
   /* --sub-header-color: rgb(0, 66, 45); */
   --sub-header-color: #555;
 
@@ -77,15 +79,14 @@ nav
 {
   position: absolute;
   min-height: 100%;
-  width: 100%;
-  background-color: rgba(20, 44, 37, 0.897);
+  width: 0;
+  background-color: var(--overlay-color);
   z-index: 2;
   display: flex;
   align-items: center;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   visibility: hidden;
-  transform: visibility 1s ease;
 }
 .nav-container.active
 {
@@ -94,12 +95,12 @@ nav
 .navigation-menu
 {
   margin-left: 4rem;
+  position: relative;
 }
 .navigation-menu li
 {
   list-style: none;
   margin-bottom: 3em;
-  /* transition: all .5s linear; */
 }
 .navigation-menu li a
 {
@@ -108,11 +109,12 @@ nav
   font-size: 4em;
   font-weight: bold;
   position: relative;
+  opacity: 0;
   transition: .3s ease-out;
 }
 .close_btn
 {
-  color: #fff;
+  color: var(--alert-color);
   position: absolute;
   top: 0;
   right: 0;
@@ -169,6 +171,31 @@ nav
   content: '';
   position: absolute;
   transform: translateY(.3rem);
+}
+
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--overlay-color) ;
+  opacity: 0;
+  transition: opacity .2s linear;
+}
+.overlay.active
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+  background-color: var(--overlay-color) ;
+  opacity: 1;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 /* LAYOUT */
@@ -307,17 +334,16 @@ nav
 }
 .image-overlay
 {
-  background-color: rgba(0,0,0,0.4);
-  backdrop-filter: blur(8px);
+  background-color: var(--overlay-color);
+  backdrop-filter: blur(5px);
   position: absolute;
   height: calc(80% - .8rem);
   width: calc(100% - 1rem);
   display: flex;
   justify-content: center;
   align-items: center;
-  /* visibility: hidden; */
   opacity: 0;
-  transition: all .5s linear;
+  transition: all .3s linear;
 }
 .image-overlay h2
 {
@@ -329,7 +355,6 @@ nav
 }
 .slider-container:hover .image-overlay
 {
-  /* visibility: visible; */
   opacity: 1;
 }
 .slider-container img
@@ -360,12 +385,20 @@ nav
   background-color: #000;
   color: #fff;
   position: absolute;
+  min-height: 2rem;
+  height: 300px;
   bottom: .5rem;
   left: -1.5rem;
-  padding: 1.2rem;
+  padding: 1.5rem;
   border-top-right-radius: 5rem;
   border-bottom-left-radius: 5rem;
-  transition: height .5 ease-in-out;
+  transition: border-radius .5s linear, height 1s ease-in-out;
+}
+.see-more
+{
+  background-color: var(--header-color);
+  padding: .2rem .4rem;
+  
 }
 .quick-facts .close_btn
 {
@@ -374,11 +407,6 @@ nav
 .fact
 {
   padding: 1rem 0 1rem 0;
-}
-.fact h3
-
-{
-  color: crimson;
 }
 .fact h3 p
 {
@@ -405,14 +433,16 @@ nav
 
 .quick-facts.active
 {
+  padding-top: 4rem;
   border-radius: 0;
   height: calc(100% - 1rem);
   width: calc(100% + 1rem);
+  z-index: 5;
 }
 .quick-facts.active .close_btn
 {
+  padding: .5rem;
   visibility: visible;
-  color: crimson;
 }
 .quick-facts.active .see-more
 {
@@ -424,5 +454,8 @@ nav
   {
     padding: 1rem;
   }
-
+  .sub-section-one-main-content
+  {
+    margin-left: 7rem;
+  }
 }
