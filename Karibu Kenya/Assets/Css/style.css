@@ -46,10 +46,15 @@ body
   width: 100%;
 }
 /* BASIC STYING */
+h1{
+  font-size: var(--extra-large-font-size);
+  font-weight: bold;
+}
 .home
 {
   font-family: var(--body-font);
   height: 100vh;
+  /* overflow: hidden; */
 }
 a
 {
@@ -232,13 +237,13 @@ nav
   color: var(--text-color);
 }
 
-.country-name
+.country-name 
 {
   font-size: var(--extra-large-font-size);
   display: flex;
   align-items: center;
 }
-.independence-day
+.independence-day 
 {
   font-size: .8rem;
   margin: auto;
@@ -386,19 +391,18 @@ nav
   color: #fff;
   position: absolute;
   min-height: 2rem;
-  height: 300px;
+  height: 310px;
   bottom: .5rem;
   left: -1.5rem;
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-top-right-radius: 5rem;
   border-bottom-left-radius: 5rem;
-  transition: border-radius .5s linear, height 1s ease-in-out;
+  transition: border-radius .2s linear, height .3s ease-in-out;
 }
 .see-more
 {
   background-color: var(--header-color);
   padding: .2rem .4rem;
-  
 }
 .quick-facts .close_btn
 {
@@ -406,7 +410,11 @@ nav
 }
 .fact
 {
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0 .2rem 0;
+}
+.fact h3
+{
+  font-size: 1.5rem;
 }
 .fact h3 p
 {
