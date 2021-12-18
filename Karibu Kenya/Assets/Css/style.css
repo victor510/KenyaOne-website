@@ -456,6 +456,46 @@ nav
 {
   visibility: hidden;
 }
+
+
+/* Carousel Bootstrap */
+.carousel-item
+{
+  height: 80vh;
+  max-width: 100%;
+  background-color: #777;
+  color: #fff;
+  position: relative;
+}
+.carousel-item img
+{
+  max-width: 100%;
+  min-height: 100%;
+  height: auto;
+  display: block;
+  /* object-fit: cover; */
+}
+.carousel-item .image-overlay
+{
+  opacity: .5;
+  min-width: 100%;
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-height: 700px)
 {
   .home
